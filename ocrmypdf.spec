@@ -14,7 +14,8 @@ BuildRequires:	qpdf
 Requires:	tesseract
 Requires:	ghostscript
 Requires:	unpaper
-Requies:	qpdf
+Requires:	qpdf
+
 %description
 Bazaar is a distributed revision control system. It allows team members to
 branch and merge upstream code very easily.
