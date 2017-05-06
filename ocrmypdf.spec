@@ -11,6 +11,7 @@ BuildRequires:	tesseract
 BuildRequires:	ghostscript
 BuildRequires:	unpaper
 BuildRequires:	qpdf
+BuildRequires:	python-setuptools
 Requires:	tesseract
 Requires:	ghostscript
 Requires:	unpaper
