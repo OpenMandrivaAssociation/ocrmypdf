@@ -32,7 +32,8 @@ Unfortunately, PDFs can be difficult to modify. OCRmyPDF makes it easy to
 apply image processing and OCR to existing PDFs.
 
 %files
-%doc  README.rst LICENSE.rst
+%license LICENSE
+%doc README.md
 %_bindir/%{name}
 %py_puresitedir/%{name}*
 
