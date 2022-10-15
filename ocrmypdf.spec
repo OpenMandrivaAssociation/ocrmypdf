@@ -1,42 +1,50 @@
-Name:           ocrmypdf
-Version:        4.5.6
-Release:        1
-Summary:        Next-generation distributed version control
+%define oname OCRmyPDF
+%define name %(echo %oname | tr [:upper:] {:lower:])
+
+Summary:	An optical character recognition (OCR) text layer to scanned PDF files
+Name:		ocrmypdf
+Version:	14.0.1
+Release:	1
 BuildArch:	noarch
-Group:          Development/Other
-License:        GPLv2+
-URL:            http://www.bazaar-vcs.org/
-Source0:	%{name}-%{version}.tar.gz
+Group:		Development/Other
+License:	MPL-2.0
+URL:		https://github.com/ocrmypdf/%{oname}
+Source0:	https://github.com/ocrmypdf/%{oname}/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	tesseract
 BuildRequires:	ghostscript
 BuildRequires:	unpaper
 BuildRequires:	qpdf
-BuildRequires:	python-setuptools
+BuildRequires:	python3dist(pip)
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(wheel)
+
 Requires:	tesseract
 Requires:	ghostscript
 Requires:	unpaper
 Requires:	qpdf
 
 %description
-Bazaar is a distributed revision control system. It allows team members to
-branch and merge upstream code very easily.
+OCRmyPDF adds an optical character recognition (OCR) text layer to scanned
+PDF files, allowing them to be searched.
 
-Distributed revision control systems allow multiple people to have their
-own branch of a project, and merge code efficiently between them. This
-enables new contributors to immediately have access to the full tools that
-previously have been limited to just the committers to a project.
-
-%prep
-%setup -q -n %{name}-%{version}
-
-%build
-export LDFLAGS=-ldl
-python setup.py build
-
-%install
-python setup.py install --root=%{buildroot}
+PDF is the best format for storing and exchanging scanned documents.
+Unfortunately, PDFs can be difficult to modify. OCRmyPDF makes it easy to
+apply image processing and OCR to existing PDFs.
 
 %files
 %doc  README.rst LICENSE.rst
 %_bindir/%{name}
 %py_puresitedir/%{name}*
+
+#-----------------------------------------------------------------------
+
+%prep
+%autosetup -n %{oname}-%{version}
+
+%build
+export LDFLAGS=-ldl
+%py_build
+
+%install
+%py_install
+
