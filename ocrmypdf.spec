@@ -1,6 +1,3 @@
-%define oname OCRmyPDF
-%define name %(echo %oname | tr [:upper:] {:lower:])
-
 Summary:	An optical character recognition (OCR) text layer to scanned PDF files
 Name:		ocrmypdf
 Version:	14.0.2
@@ -8,8 +5,8 @@ Release:	1
 BuildArch:	noarch
 Group:		Development/Other
 License:	MPL-2.0
-URL:		https://github.com/ocrmypdf/%{oname}
-Source0:	https://github.com/ocrmypdf/%{oname}/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+URL:		https://github.com/ocrmypdf/OCRmyPDF
+Source0:	https://github.com/ocrmypdf/OCRmyPDF/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	tesseract
 BuildRequires:	ghostscript
 BuildRequires:	unpaper
@@ -40,7 +37,7 @@ apply image processing and OCR to existing PDFs.
 #-----------------------------------------------------------------------
 
 %prep
-%autosetup -n %{oname}-%{version}
+%autosetup -n OCRmyPDF-%{version}
 
 %build
 export LDFLAGS=-ldl
