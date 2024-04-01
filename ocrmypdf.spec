@@ -1,6 +1,6 @@
 Summary:	An optical character recognition (OCR) text layer to scanned PDF files
 Name:		ocrmypdf
-Version:	16.1.1
+Version:	16.1.2
 Release:	1
 BuildArch:	noarch
 Group:		Development/Other
