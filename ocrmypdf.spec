@@ -11,7 +11,7 @@ BuildRequires:	tesseract
 BuildRequires:	ghostscript
 BuildRequires:	unpaper
 BuildRequires:	qpdf
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(hatchling) = 1.25
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
