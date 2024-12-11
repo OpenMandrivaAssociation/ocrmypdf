@@ -12,7 +12,7 @@ BuildRequires:	ghostscript
 BuildRequires:	unpaper
 BuildRequires:	qpdf
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python%{pyver}dist(hatchling) = 1.25
+BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
