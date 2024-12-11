@@ -12,7 +12,7 @@ BuildRequires:	ghostscript
 BuildRequires:	unpaper
 BuildRequires:	qpdf
 BuildRequires:	pkgconfig(python)
-BulidRequires:	python%{pyver}dist(hatch-vcs)
+BuildRequires:	python%{pyver}dist(hatch-vcs)
 BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
