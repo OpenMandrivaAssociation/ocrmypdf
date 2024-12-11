@@ -11,9 +11,11 @@ BuildRequires:	tesseract
 BuildRequires:	ghostscript
 BuildRequires:	unpaper
 BuildRequires:	qpdf
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(hatchling) = 1.25
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 Requires:	tesseract
 Requires:	ghostscript
