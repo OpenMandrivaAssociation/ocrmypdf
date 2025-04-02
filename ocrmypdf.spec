@@ -1,6 +1,6 @@
 Summary:	An optical character recognition (OCR) text layer to scanned PDF files
 Name:		ocrmypdf
-Version:	16.9.0
+Version:	16.10.0
 Release:	1
 BuildArch:	noarch
 Group:		Development/Other
@@ -20,6 +20,7 @@ BuildRequires:	python%{pyver}dist(wheel)
 
 Requires:	tesseract
 Requires:	ghostscript
+Requires:	pngquant
 Requires:	unpaper
 Requires:	qpdf
 
@@ -43,7 +44,7 @@ apply image processing and OCR to existing PDFs.
 %autosetup -n OCRmyPDF-%{version}
 
 %build
-export LDFLAGS=-ldl
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %py_build
 
 %install
