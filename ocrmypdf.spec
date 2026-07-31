@@ -1,7 +1,7 @@
 Summary:	An optical character recognition (OCR) text layer to scanned PDF files
 Name:		ocrmypdf
-Version:	16.10.0
-Release:	3
+Version:	17.8.1
+Release:	1
 BuildArch:	noarch
 Group:		Development/Other
 License:	MPL-2.0
@@ -41,7 +41,7 @@ apply image processing and OCR to existing PDFs.
 #-----------------------------------------------------------------------
 
 %prep
-%autosetup -n OCRmyPDF-%{version}
+%autosetup -n OCRmyPDF-17.8.1
 
 %build
 export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
